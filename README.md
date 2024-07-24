@@ -2,7 +2,7 @@
 
 Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Animations, Next.js, Best Practices and way more!
 
-<div style="display: flex; justify-content: center; align-items: center;">
+<div align="center" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); display: flex; justify-content: center; align-items: center;">
   <img style="margin: 0 10px;" src="https://techstack-generator.vercel.app/react-icon.svg" alt="icon" width="100" height="100" />
   <img style="margin: 0 10px;" src="https://techstack-generator.vercel.app/redux-icon.svg" alt="icon" width="100" height="100" />
   <img style="margin: 0 10px;" src="https://techstack-generator.vercel.app/js-icon.svg" alt="icon" width="100" height="100" />
