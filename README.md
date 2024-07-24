@@ -74,9 +74,9 @@ My goal with this course is to ensure that you feel confident working with React
 
 And best of all?
 
-You don't need any prior React knowledge!
+**You don't need any prior React knowledge!**
 
-This course starts with zero knowledge assumed! All you need is basic web development and JavaScript knowledge (though the course even includes a brief JavaScript refresher to ensure that we're all on the same page!).
+This course starts with zero knowledge assumed! **All you need is basic web development and JavaScript knowledge** (though the course even **includes a brief JavaScript refresher** to ensure that we're all on the same page!).
 
 ## Who this course is for:
 
