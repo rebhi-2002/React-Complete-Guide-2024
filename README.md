@@ -2,6 +2,14 @@
 
 Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more!
 
+<div style="display: flex; justify-content: center; align-items: center;">
+  <img style="margin: 0 10px;" src="https://techstack-generator.vercel.app/react-icon.svg" alt="icon" width="100" height="100" />
+  <img style="margin: 0 10px;" src="https://techstack-generator.vercel.app/redux-icon.svg" alt="icon" width="100" height="100" />
+  <img style="margin: 0 10px;" src="https://techstack-generator.vercel.app/js-icon.svg" alt="icon" width="100" height="100" />
+  <img style="margin: 0 10px;" src="https://techstack-generator.vercel.app/jest-icon.svg" alt="icon" width="100" height="100" />
+  <img style="margin: 0 10px;" src="https://techstack-generator.vercel.app/github-icon.svg" alt="icon" width="100" height="100" />
+</div>
+
 ## What you'll learn 🚀
 
 - Learn React from the ground up and finish the course as an advanced React developer
