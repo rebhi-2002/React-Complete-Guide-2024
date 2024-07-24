@@ -11,9 +11,13 @@ Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router
   <img style="margin: 0 10px;" src="https://github.com/rebhi-2002/React-Complete-Guide-2024/blob/main/Assets/github-icon.svg" alt="icon" width="100" height="100">
 </div>
 
+<br /><br />
+
 <div align="center">
-  <img style="margin: 0 10px;" src="https://github.com/rebhi-2002/React-Complete-Guide-2024/blob/main/Assets/photo_2023-05-21_14-08-08.jpg" alt="icon" width="100" height="100">
+  <img style="width: 60%;" src="https://github.com/rebhi-2002/React-Complete-Guide-2024/blob/main/Assets/photo_2023-05-21_14-08-08.jpg" alt="icon">
 </div>
+
+<br />
 
 ## What you'll learn 🚀
 
