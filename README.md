@@ -98,7 +98,7 @@ This course starts with zero knowledge assumed! **All you need is basic web deve
 
 - [React Documentation](https://reactjs.org/docs/getting-started.html)
 - [Redux Documentation](https://redux.js.org/introduction/getting-started)
-- [React Router Documentation](https://reactrouter.com/web/guides/quick-start)
+- [React Router Documentation](https://reactrouter.com/en/main)
 - [MDN Web Docs](https://developer.mozilla.org/en-US/)
 
 ## Additional Explanations 📝
