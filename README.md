@@ -1,6 +1,6 @@
-# React - The Complete Guide 2024 (incl. Next.js, Redux) 🌟
+# React - The Complete Guide 2024 (incl. Hooks, React Router, Next.js, Redux) 🌟
 
-Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more!
+Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Animations, Next.js, Best Practices and way more!
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <img style="margin: 0 10px;" src="https://techstack-generator.vercel.app/react-icon.svg" alt="icon" width="100" height="100" />
