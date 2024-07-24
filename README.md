@@ -1,12 +1,11 @@
-# React - The Complete Guide 2024 (incl. Next.js, Redux)
+# React - The Complete Guide 2024 (incl. Next.js, Redux) 🌟
 
 Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more!
 
-## What you'll learn:
+## What you'll learn 🚀:
 
 - Learn React from the ground up and finish the course as an advanced React developer
 - Build multiple high-quality demo apps, including a fullstack app built with NextJS
-- Join more than 800,000 students in this course & more than 2,500,000 students I taught across all my courses
 - Build fullstack React apps with NextJS 14+
 - Follow along locally or in a cloud development environment
 - Learn all about React Hooks and React Components
@@ -25,46 +24,6 @@ Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router
 
 ## Description
 
-This bestselling course has turned more than 800,000 students into ReactJS developers (more than any other React course on Udemy)!
-
--
-
-Updated January 2024:
-
-Added brand-new content (~3h) on the NextJS App Router
-
-Added a brand-new "Best Practices & Patterns" section
-
-BIG COURSE UPDATE October 2023:
-
-Updated the entire first half of the course (re-recorded lectures, other half was updated at beginning of year already)!
-
-Improved explanations & demo projects. Course now covers even more key concepts & best practices.
-
-Updated August 2023:
-
-Added brand-new section on React Query (Tanstack Query)
-
-Added brand-new section on animating React apps with Framer Motion
-
-Updated June 2023:
-
-Add two new practice projects
-
-Added more coding exercises
-
-Added brand-new JS Refresher section
-
-Tons of minor improvements & fixes
-
-This course is completely up-to-date with the very latest version of React with all the core, modern features you need to know & teaches you React in a practical, hands-on way!
-
-Updated February 2023:
-
-Completely re-recorded majority of second half of course (incl. routing, authentication)
-
-A Course For Busy Customers & Business Professionals!
-
 This course also comes with two paths which you can take: The "complete" path (full >40h course) and the "summary" (fast-track) path (~4h summary module) - you can choose the path that best fits your time requirements!
 
 React.js is THE most popular JavaScript library you can use and learn these days to build modern, reactive user interfaces for the web.
@@ -75,7 +34,7 @@ You'll get all the theory, tons of examples and demos, assignments and exercises
 
 And in case you don't even know why you would want to learn React and you're just here because of some ad or "the algorithm" - no worries: ReactJS is a key technology as a web developer and in this course I will also explain WHY it's that important!
 
-Welcome to "React - The Complete Guide"!
+**Welcome to "React - The Complete Guide"!**
 
 This course will teach you React.js in a practice-oriented way, using all the latest patterns and best practices you need. You will learn all the key fundamentals as well as advanced concepts and related topics to turn you into a React.js developer.
 
@@ -84,8 +43,6 @@ This is a huge course because it really covers EVERYTHING you need to know and l
 No matter if you know nothing about React or if you already got some basic React knowledge (not required but also not a problem), you will get tons of useful information and knowledge out of this course!
 
 My goal with this course is to ensure that you feel confident working with React, so that you can apply for React jobs, use it in your own projects or simply enhance your portfolio as a developer - whatever your goal is: This course gets you there!
-
-I kept this course updated since its initial launch to ensure that you always learn React in the best possible and up-do-date way!
 
 ### What's in this course?
 
@@ -147,10 +104,35 @@ You don't need any prior React knowledge!
 
 This course starts with zero knowledge assumed! All you need is basic web development and JavaScript knowledge (though the course even includes a brief JavaScript refresher to ensure that we're all on the same page!).
 
-Check out the full curriculum, the free preview videos and join the course risk-free thanks to the 30-day money-back guarantee!
-
 ## Who this course is for:
 
 Students who want to learn how to build reactive and fast web apps
 Anyone who's interested in learning an extremely popular technology used by leading tech companies like Netflix
 Students who want to take their web development skills to the next level and learn a future-proof technology
+
+### References & Resources 🌐
+
+- [Udemy Course Page](https://www.udemy.com/course/react-the-complete-guide-incl-redux/?couponCode=D_0724)
+- [Academind YouTube Channel](https://www.youtube.com/channel/UCSJbGtTlrDami-tDGPUV9-w)
+- [Maximilian Schwarzmüller YouTube Channel](https://www.youtube.com/@maximilian-schwarzmueller)
+- [Academind Official Website](https://academind.com/)
+- [Academind GitHub](https://github.com/academind)
+- [Course Code Repository](https://github.com/academind/react-complete-guide-code/tree/master)
+- [Maximilian Schwarzmüller GitHub](https://github.com/maxschwarzmueller)
+
+### Additional Resources 📖
+
+- [React Documentation](https://reactjs.org/docs/getting-started.html)
+- [Redux Documentation](https://redux.js.org/introduction/getting-started)
+- [React Router Documentation](https://reactrouter.com/web/guides/quick-start)
+- [MDN Web Docs](https://developer.mozilla.org/en-US/)
+
+## Additional Explanations 📝
+
+- **What is React?**: React is a JavaScript library for building user interfaces, allowing you to create interactive UIs with its component-based architecture.
+- **Why Redux?**: Redux helps in managing state centrally, making it easier to handle large and complex applications.
+- **Importance of React Router**: Enables smooth navigation between pages without reloading, enhancing the user experience.
+
+---
+
+## Thank you for your interest 😊
