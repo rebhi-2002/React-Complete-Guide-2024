@@ -1,0 +1,552 @@
+01 Module Introduction:
+-----------------------
+
+Welcome to this module in this course. I'm going to say it right away.
+This module is optional.
+If you already know next generation javascript, so things like arrow functions, let, const and so on,
+You may very well skip this module. This module is for you if you know javascript but haven't worked
+with ES6 or any other version of javascript. Then javascript as we use it in this course might sometimes
+look like a new language to you because of all the next generation features React apps typically
+use.
+Now I'm not using these next generation features because I want to show off or anything like that.
+React apps typically are built with the latest version of javascript and using the next gen features
+allows us to write clean and robust React apps. React itself uses a lot of Next Generation Javascript
+features.
+Therefore it's important for you to understand all these features and not be confused by this.
+Sometimes really strange looking version of Javascript.
+Javascript is evolving quickly and therefore new features can look different but really allow us as
+a developer to do more powerful things.
+This module is for you, I will walk you through the core features we use in this course so that the code
+thereafter hopefully looks a bit less strange to you.
+And again, feel free to skip this module if you already know it,
+feel free to always come back to it if you later in the course encounter something that looks strange
+to you.
+
+02 Understanding let and const:
+-------------------------------
+
+Let's dive right into it with let and const. These are two keywords you're going to see a lot in this
+course, especially const. Let and const are different ways of creating variables.
+You know var, var creates a variable in javascript.
+Now the thing is some variables never really change,
+They are so-called constants.
+Technically though, they are.
+They are all just variables because javascript only knows var. With ES6, a version of javascript, two different
+keywords were introduced, let and const. Var still works but you're highly encouraged to use let and const
+Let is
+so to say the new var, you use it for variable values. Let and const are all to changing something behind the
+scenes about the scope of variables.
+But the most important takeaway here is use let if you want to create a variable that really is variable.
+Use const if you plan on creating a constant value, so something which you only assign once and never
+change.
+And that is the case more often than you might think.
+In this course you will never see var, you will only see let and const and mostly it's const. So it
+shouldn't confuse you,
+It's simply the same as var, just in a more modern way, and in the case of const, although clearly
+showing, this is never going to receive a new value.
+Now since this is always a bit clearer in practice let's have a look at it. For this,
+It's best if you use jsbin
+.com,
+That's another web editor which makes it easy for us to enter some javascript and see some console output
+for that, disable HTML and output up there and instead to enable Javascript and console.
+Now on the left side you can right next generation javascript, on the right side you'll see the output.
+So there we can create a variable.
+My name, set an equal to Max, console log my name, now hit control enter you'll see Max on
+the right,
+Not that new to you probably.
+Obviously we can then set my name to Manu and if we then console log my name again.
+It might also not totally surprise you that if you clear and run this again you'll see Max
+From the first statement and Manu from the second one.
+Now if you change var to let,
+Nothing's going to change.
+Hitting run still works the exact same way. If you use const though like this.
+Then clearing and running this will output Max,
+But then throw an error, since we try to reassign a constant variable which is kind of a strange name.
+This is const and this is the idea behind const.
+You can say this should never get a new value and if you then accidentally write some code where you
+reassign it you get the error and hence a chance to improve your code.
+
+03 Arrow Functions:
+-------------------
+
+You'll learn about let and const, another thing another construct you're going to see a lot in this
+course are arrow functions.
+That's a different syntax for creating Javascript functions.
+A normal javascript function of course looks like this.
+With the function keyword. You might also note a syntax where you have var myFunc equals function.
+Now an arrow function looks like this.
+Here I'm storing it in a constant and then on the right side of the equals sign.
+That's the arrow function syntax.
+A list of arguments here it's none but it could hold some arguments and then an arrow.
+So an equal sign and a greater than sign and then the function body.
+The arrow function snyntax is a bit shorter than the normal syntax since it omits the function keyword
+and it also and that is the great benefit.
+Solves a lot of the issues you often had with the.
+This keyword in javascript.
+If you've worked with javascript a bit, you probably know that the this keyword doesn't always refer to what
+you might have expected it to refer to during you writing your code.
+When you use this inside an arrow function it will always keep its context and not change it surprisingly
+on runtime.
+So let's now move to jsbin to see that arrow function syntax.
+In practice. Back in jsbin.
+let's create a normal function, printMyName like this.
+Now here we can of course output console log name and pass name as an argument.
+Now if I call printMyName like this and hit control enter, we get undefined because it didn't pass
+anything for it. We do the same with Max passed as an argument.
+We get Max. Now the arrow function equivalent is to store it in as a constant named printMyName.
+It could also be created with let.
+If you plan on re-assigning this variable printMyName as a constant.
+And now don't forget to add this arrow between the list of arguments and the function body. If you now clear
+and rerun this you'll still see Max.
+So here it behaves exactly the same way.
+Now the this keyword thing is something you'll see throughout the course.
+It becomes important once you add functions to objects of course.
+First of all let me show you some alternatives to this syntax though regarding the argument list.
+To be precise. If you only receive one argument as we do here, you can also use a shortcut of omitting
+the parentheses around it.
+That's only valid for exactly one argument though, not for more and not for less. Here,
+You will still get the same result. If you had a function which receives no arguments.
+This is not valid syntax.
+You need to pass an empty pair of parentheses like this.
+If we execute this now we also still see Max.
+So this works if you have more than one argument.
+You also need parentheses.
+So name and age like this won't work.
+You will need to wrap this in parentheses.
+And now you could output name and age and pass both as arguments here.
+So these are two different syntaxes you might see regarding the arguments.
+There also is an alternative.
+Regarding the function body.
+So on the right side of the arrow. Obviously a lot of functions just return something.
+So let's say here we actually want to multiply something and we get a number as an argument.
+Now we want to return number * 2. Obviously what we can do is we can console log the result of
+multiply.
+So what's returned by multiply and pass two here.
+If I now clear this and run this we should see four and we do.
+If you have this case where all you do in your function body is return and you have no other code in
+there you can omit the curly braces and write this in one line and then you also have to omit the return
+keyword. This is a very short version of writing this function.
+It gets a bit shorter if we take advantage of the shortcut of removing the parentheses around the single
+argument.
+And now what this does is it still returns the result of this code.
+Here we just omit the return keyword and we have 2 omitted.
+And we have a very concise and short way of writing a function that takes one or more arguments and
+returns something.
+So here clearing and running this still yields 4.
+So this is all the syntax you might see and the arrow function in general is something you'll see a lot.
+You saw the various syntaxes.
+You don't have to remember all of them right now.
+Just be aware that there are different syntaxes and if we then use them they'll quickly come back
+to your mind and you know why we use a given syntax.
+
+04 Exports and Imports:
+-----------------------
+
+Another feature which next generation javascript offers is about writing modular code so javascript
+code you split up over multiple files.
+And obviously we already can split our code over multiple files.
+We just have to import them in the correct order in our html files.
+And the idea behind export and import statements and so-called modules is that inside of a javascript
+file we can import content from another file so that the javascript files themselves know their
+dependencies.
+It might look like this.
+We have one file, person.js and there we have this constant person which is stored as a javascript object
+and then this is the interesting part.
+We export this the default keyword this is a special keyword marking this as the default export of
+this file and we can then import this somewhere else and the import statement will be shown in a second.
+We also might have a number of files where we export multiple things, here a constant named clean which
+holds a function at the end and baseData which holds a number in a third file.
+We might need to import from person.js and utility.js so app.js requires import statements.
+And here are a couple of different import syntaxes you will see in this course. person.js as you see
+uses the default keyword, the default keyword simply means if we just import something from that file
+it will always be our default export.
+So in this case the person constant therefore in import person from person.js we can name person whatever
+we want, which is why I printed it twice here, person or prs doesn't matter.
+It always refers to the thing you marked as the default with the default keyword. For utility.
+js it's a bit different. There
+We import from two different constants and therefore the import syntax uses the curly braces to explicitly
+target specific things from that file.
+These are so-called named exports because we import the stuff by its name.
+We import the clean constant by its name and we import baseData by its name because we didn't mark anything
+as the default.
+So for javascript to know what exactly we're pointing to, we need to give it the exact name and the name
+goes between curly braces.
+By the way, you could also write this as one import statement with baseData comma clean or the other
+way around.
+So these are imports and exports.
+You write all of this in your javascript files and will heavily use this throughout this course.
+Now as with all these next generation javascript features, it won't run like this in all browsers.
+Not even the most modern browsers support all the features we'll use in this project.
+Therefore in the next course module I'll also show you how to quickly set up a project which in the
+end just compiles all these next generation javascript features to current gen javascript features
+so that we as a developer can use the next generation javascript without us shipping code that runs
+nowhere.
+So back to the imports and exports.
+This is the syntax we use and you will see getting used a lot in this course.
+You might also see some variations because we can also write this differently when we have a default
+export.
+You already saw that person is name you can choose totally on your own.
+It doesn't matter here if you use person or prs.
+If you have a named export you actually have to use the exact name defined in the file with the export
+keyword.
+Still what you can do.
+You can assign an alias which you then again can freely choose in the file you are importing it with
+the as keyword or if you have multiple named exports in a file.
+You can import everything with this * special character and then assign an alias and bundled.
+In this case would be a javascript object which exposes all constants and whatever you export in the other
+file as properties so that you simply have bundled.baseData, bundled.clean to access the
+export of things.
+That's up to you and you will see me use these things throughout the course.
+The most common use search is the top one.
+Import curly braces something curly brace from.
+
+05 Understanding Classes:
+-------------------------
+
+We learned about imports and exports. Another core feature of next generation javascript are classes
+if you're coming from some other programming language, you might already know classes.
+Classes are essentially blueprints for objects.
+In our case here for javascript objects. A class is created with the class keyword and a class can have
+both properties and methods.
+Methods are simply functions attached to classes where properties are variables attached to classes.
+You could say we'll use both in this course and then we'll obviously always explain what we're doing here.
+When we add such a property or method a class is instantiated like this with the new keyword.
+And this might of course look familiar to you if you worked a bit with javascript.
+You might notice from constructor functions and indeed classes are kind of a more convenient way of
+creating constructor functions so you create javascript objects with classes as blueprints.
+That's the idea and classes also support inheritance.
+Which means you have another class which you inherit from taking all its properties and methods and
+potentially adding new properties and methods.
+That also might look familiar to you.
+You might notice from prototypes.
+Let's have a look at classes in action.
+Let's create a new class here.
+I'll name it person just like this.
+Then you have curly braces to mark the class body.
+And now there we can start using properties now in its simplest form a property is added by adding a
+constructor that is a default function method.
+You can add to any class which will be executed whenever you instantiate the class and the method is
+created just with the name of the method parentheses and then curly braces.
+And then there we can now set up properties with the this keyword and we could write this name equals max
+for example.
+We can now also add a method.
+PrintMyName and there we could simply output this.name referring to the name property we created.
+Now we can use this class to store an instance in a constant with new person and then we can execute
+person.
+PrintMyName.
+If we now hit run we see Max.
+This is how easy we can use a class.
+Now I said that classes can also inherit.
+So what we can do is we can create another class human, and there we might also add a constructor to
+set this.gender equal to male or female of course if you want, what you feel, whatever you want and you could
+at printGender and then output console log.
+this.gender.
+And now if person extends then that's a keyword word again extends human.
+Now we inherit this property and this method printGender and we can use both on the person as well
+so we can also call a person.printGender like that.
+However before we run to successfully we're actually let's try it.
+We'll get an error that we must call the super constructor in the derived class and that's important.
+If you are extending another class and you are implementing the constructor which you don't have to.
+But if you are then you have to add super this special super method in the constructor.
+It's a keyword and it simply executes the parent constructor to which you of course have to to correct
+to initialize the parent class.
+So now you hit clear and run you'll see Max and male and obviously you could now go into your person
+class and still set gender there to female which is not 100 percent correct here but that's just to show case
+that this works.
+Now you see we print female even though we're still calling printGender here.
+But it is extended by person so these are classes and classes are used by React to create its components.
+At least this is one of the two ways of creating components.
+This is how you will see me use it in this course and it's important to understand that classes are
+just blueprints for javascript objects and are very comparable to constructor functions where inheritance
+is comparable to prototypes.
+
+06 Classes, Properties and Methods:
+-----------------------------------
+
+So in the last video we learned about classes and we learned about properties and methods.
+There too. Now next generation javascript also offers a different syntax of initializing properties and methods.
+And actually it is this more modern syntax I'll use in this course.
+So I want to show it to you here too.
+You already learned that properties are like variables you attach to classes and objects, methods are
+like functions attached to classes and objects and you'll learn about this syntax where we set up properties
+in the constructor function.
+Now there is a more modern syntax which spares us using this constructor function with next generation
+javascript as we will use it in this course.
+You can assign a property directly inside your class with myProperty equals value.
+So you skip the constructor function call.
+Behind the scenes this will still be transformed to use constructor functions.
+But you'll have an easier time writing this and for methods, it's pretty similar.
+This is the old way.
+I showed you in the last lecture.
+Now the next generation javascript way is to use the syntax from the left where you set up a property
+and simply think of a method as a property which stores a function as a value and then you end up with
+that.
+My method equals and then an arrow function.
+The great advantage of this syntax is that since you use an arrow function as a property value here you've
+got no problems with the this keyword and that's the exact reason why we will use this syntax here on the
+bottom right corner and the syntax on the bottom left corner throughout this course.
+Let me show you the syntaxes to you.
+Back to jsbin on the project we already worked on here with the human and the person class.
+We can get rid of the constructor in the human class and get rid of the this keyword.
+and just set gender equal to male and print.
+Gender can be set equal to an arrow function where we console log.
+this.gender still using the this keyword in here when we reach out to the property.
+Though you may ignore that arrow for now the same for the person we no longer need the constructor
+and we no longer need to call super for that reason.
+Instead what we do is we call this name without this just name equal to Max and gender equal female
+if you want to and printMyName equals an arrow function too, like this.
+Now if you clear this and run this you will get an error because it doesn't recognize the syntax
+you actually need to go to the dropdown where it says javascript and choose ES6.
+Babel here.
+If you do this and hit clear and run you'll see Max and female.
+You'll still see the arrows on the left but you may ignore them.
+This is the syntax which is next generation javascript which we will actually use in this course.
+
+07 The Spread & Rest Operator:
+------------------------------
+
+We learned a lot about classes and arrow functions.
+Let's now turn our heads towards new operators we'll be able to use in the future of javascript and we
+already can use today in our React project, the Spread and the Rest operators.
+Actually it's only one operator three dots.
+Yes this may look strange but the operator is just three dots.
+Now if we call it spread or rest depends on where we use it, the spread operator is used to split up
+array elements or object properties.
+So we spread up an array or object.
+For example if we have an old array and we want to add all the elements from that old array to a new
+array and additionally add a 1 and a 2 element this first syntax would be what we use, three dots in
+front of old array will simply pull out all the elements and add it to the new array which we created
+with square brackets.
+And of course then we can add more elements to it.
+So if we just use the normal syntax with the square brackets to create an array, the same for the object.
+We create a new object with curly braces with the new prop but then we also have dot dot dot.
+Old object to pull out all the properties of the old object and their values and add them as key value
+pairs to the new object as a side note if the old object.
+Also had a new property.
+It would be overwtitten by a new prop 5 here.
+So our own property takes precedence. This is the spread operator.
+Now the rest operator is the same operator but used differently, here it's used to merge a list of function
+arguments into an array.
+And this shows us where we use it.
+We use it in a function argument list.
+Here is an example.
+sortArgs receives an unlimited amount of arguments.
+So one argument, two, three or whatever, with dot dot dot we only write one argument args but we may actually
+receive more than one and they will all be merged together into an array.
+So then we can apply array methods to our argument list or do whatever we want to do with our conveniently
+stored arguments.
+Let's have a look at both used as such on jsbin then.
+So let's start with the spread operator I'll create an array of numbers.
+So one, two, three add as many as you want.
+Now I want to create a new array newNumbers and as you saw spread is now simply used by adding three
+dots.
+Then the old array numbers and then potentially you don't have to do that.
+New numbers like 4 and again that is optional.
+With that if I now console log.
+newNumbers here.
+And I had run we get one two three four the old array with all its elements and the new element.
+And actually we don't add the old element.
+If we were to do that without the dots it would be included as one element inside the new element.
+It really pulled out the old elements as you can clearly see.
+So that's the spread operator and you will see me use this throughout this course a couple of times on
+both arrays and objects to for example conveniently copy arrays or add properties to an object whilst
+safely copying that old object.
+Again I will obviously also always mention why I'm using that operator when I do in the course.
+Just be aware that it exists.
+Let's now see the same for objects I'll create a person object here where I have a name.
+Let's say Max and now I will have a newPerson object which is a javascript object a new one where I
+First of all use the spread operator on person to copy all the property value pairs of the old object
+and potentionally and that's always optional.
+Add a new property.
+And now if I console log newPerson you may ignore this error which is thrown by jsbin, the syntax
+will be supported in our course project.
+If we do this you see object is printed here with name Max at age 28.
+So it's taking the old person and distributing it into the new person that's the spread operator.
+Now the rest operator which is used less often though is used in a function and you could of course
+also use ES6 arrow function.
+So there we could have a filter function whatever you want to name it and we get a couple of args and
+you don't have to use args here you can also name this a or whatever you want but you have to use the three dots
+in front of it.
+So then there you can simply return.
+We could use the inline syntax here to write it all in one line without you return keyword here I'll
+use return.
+You could return args and then let's say we call the built-in filter method which is available on arrays
+and keep in mind the dots here are used as a rest operator and that merges the arguments into an array.
+So we can use array methods like filter, filter will execute a function on every element in the passed in
+array.
+So here we would get our element and then we could use the inline arrow function to simply say return
+true or false.
+Which filter expects if the element is equal to 1.
+Now that might be a lot of syntax you don't know.
+Three equals signs checks for type and value equality so that el also has to be a number.
+And this is just an arrow function that we pass to the built-in filter method.
+So this has nothing to do with rest or spread.
+We have that we could call filter and let's console log to see something console log filter.
+So our filter function here on let's say 1 2 3 and actually we should only log 1 here as an array
+though because we filtered this array which is created with the rest operator with the three dots here.
+So that's Rest and spread again spread is the usage of the three dots you will see more often in this
+course.
+
+008 Destructuring:
+------------------
+
+So we learned about rest and spread.
+There's one other next generation feature I definitely want to cover and that's called destructuring.
+Destructuring allows you to easily extract array elements or object properties and store them in variables.
+When you first hear about that it might sound like the exact thing the spread operator does but actually
+it's a different thing.
+Spread takes out all elements all properties and distributes them in a new array or object or wherever
+you're using it.
+Destructuring allows you to pull out single elements or properties and store them in variables for arrays
+and objects.
+Now for arrays it looks like this.
+If we have an array with two elements.
+Hello and max then we can use these strange looking syntax on the left side of the equals sign which
+looks like we are creating an array but we are not to assign the variables a and b to a Hello and Max
+respectively and for object destructuring it's the same syntax with curly braces and where in array destructuring
+the order defines which property we take, for object destructuring.
+It's the property name so curly brace name curly brace on the left side targets the name property of the
+object on the right side and pulls out the value which is why logging age would yield undefined.
+We're not pulling this out of the object here.
+So this is destructuring.
+Let's also have a look at this in practice back in jsbin,let's start with our numbers array again
+which has the numbers 1 2 and 3.
+And now let's say we want to get the numbers 1 and 2.
+Then we can use this array syntax on the left side of the equal sign and choose any variable names of
+our choice like num1 and num2 and we assign this equal to the number as array.
+If I now console log num1 and num2 and I run this you see 1 and 2 being logged because I'm
+pulling these two out of the array.
+I'm not pulling 3 if I want to get three.
+By the way I'll simply add num3 here.
+You don't have to rename it though and you'll leave out the one space with an empty space here in your
+declaration on the left side.
+Now if you had run you get one and three.
+That's array destructuring.
+Now object destructuring is also supported by our project as we'll use it in this course.
+However it's not supported by jsbin here.
+So I can't show it to you.
+But I did show the syntax on the slide.
+It's the syntax where you use curly braces on the left and target a property with its property
+name.
+In this course I won't use these destructuring syntaxes too often but I want you to be aware of the existence
+of them and that they are nice ways of conveniently pulling out certain elements from an array or properties
+with their values from an object.
+
+09 Reference and Primitive Types Refresher:
+-------------------------------------------
+
+Now over the last lectures I introduced you to some of the most important next generation javascript
+features which you're going to see in those course.
+There are two other things I know definitely.
+Also want to cover.
+They're not next generation javascript but they are features you might have missed or forgotten and
+they're super important to keep in mind.
+The first feature or concept of javascript I'm talking about is the fact that you have reference and
+primitive types.
+If I create a number like this, then this is a primitive type.
+That means if I create a second number num2 and set it equal to this number then it will actually
+create a real copy of number so num2 of course.
+Now if I log this, it will also be one.
+But it will have copied that value one into num2.
+Now numbers, strings, booleans, these are so-called primitive types whenever you reassign or you store
+a variable in another variable.
+It will copy the value, objects and arrays are reference types.
+Though let me show you what I mean.
+I create my personal object which just has a name here and I now create a secondPerson and assigned
+person as a value here.
+If I console log.
+secondPerson and hit run, it will print the same value as the first person but it will not actually have
+copied the person instead.
+Person the object is stored in memory and in the constant person we store a pointer to that place in memory.
+And if we then assign person to secondPerson that pointer will be copied.
+We can see that this is the case if we changed person.name after having it copied.
+With that you would expect to print Max here still a person with name Max because we copied person, stored
+it in secondPerson and thereafter changed the name.
+However if I clear and run you will see name.
+Manu here even though I'm printing the secondperson so for secondPerson the name also changed
+the reason for it is that it just copied the pointer and points to the exact same object in memory as
+person does.
+So if we change name on person we automatically change it for secondPerson.
+Now that's important.
+Keep in mind and it's the same for arrays.
+If you copy in quotation marks.
+An array like this.
+And you then change an array element.
+It will all change in the so-called copied array.
+This will become important in React because it can lead to unexpected behaviors.
+If you copy objects or arrays like this because you then may manipulate one object in one place in the
+app and accidentally manipulate another usage of the same object in another place of the app.
+Therefore we will learn techniques to copy this in an immutable way which means we copy that by really
+copying the object and not just a pointer for that we can use this spread operator.
+Now we can simply create a new person object here and spread the person properties.
+This will pull out the properties and the values of the properties from the object and add it to this
+newly created object here and we do create a new one with the curly braces.
+Now if I hit clear and run we still print an object with name Max even though we changed the name to
+Manu here because now we really created a real copy.
+This is a technique I will also come back to later in this course.
+It's just important to realize and to keep in mind that objects and arrays are reference types.
+If you reassign them you're copying the pointer not the value.
+Therefore if you want to do this in a real copy way, you will have to create a new object and just copy
+the properties and not the entire object.
+That's something very important to keep in mind for this course.
+
+10 Refreshing Array Functions:
+------------------------------
+
+In the last lecture we had a look at reference of primitive types something super important to keep
+in mind when working with javascript.
+Another thing you will see quite a lot in this course are array functions.
+We already saw filter a couple of lectures ago.
+We also got sort, map and so on.
+Let me quickly show you what I mean.
+The good old numbers array with 1, 2 and 3.
+Now let's say we want to turn this into an array where each number is doubled.
+So we have to doubleNumArray, something like that we can use an array function for this.
+We can take the numbers array and call map.
+Map is a built-in array method.
+And there are many of these methods.
+I will use quite a lot of them and they're not.
+Next generation javascript all these methods work in the same way though they take a function as an
+input and this function which is an arrow function here but could be a normal function is then simply
+executed on each element in the array here.
+So on each element in the numbers array, on 1 and 2 and 3.
+So therefore what we get in this arrow function is a number in the end.
+But you can name this argument whatever you want here.
+We can then simply return something.
+And what you have to do in this internal function depends on which area of function you are using.
+Check the docs in places like d Mozilla Developer Network docs to learn more about the available array
+functions.
+So in the map function we have to return the new value we want to turn the old one into so we could
+return num * 2 and since this is executed on every element here.
+It will return 2, 4 and 6 and conveniently map all the returns a new array.
+So a real new array which is then stored in doubleNumArray.
+So now if I output numbers and thereafter doubleNumArray like this and then I'll hit run you'll see
+the old one is unchanged but the new one holds double the values and I will explain what these functions
+do when we use them in the course.
+I just want to bring them to your attention right now.
+Explain that they always have this function which gets executed on each element and that they are not
+next generation javascript but normal javascript actually, be prepared to meet them.
+I will explain what they do when we see them and always feel free to dive into docs like the Mozilla
+developer network to learn more about them.
+
+11 Wrap Up:
+-----------
+
+With that I want to conclude this module. We've learned a lot about next generation javascript and some
+important javascript concepts.
+In general you will meet a lot of the things you'll learn about in this module throughout the course.
+Don't be confused by it.
+It's still javascript.
+Just using some more modern features.
+That's just how we write React apps.
+The next module will now start with React.
+Now I will show you how to quickly create a project set up where we can use all these features while
+still shipping code that works in older browsers too.
+With that you're well prepared.
+Always feel free to go back to this module and have a look at a given feature if you forgot how it
+worked and you meet it in the course and want to refresh your knowledge.
+And with that let's dive into React.
+
+12 next-gen-js-summary.pdf
+12 Next-Gen JavaScript - Summary.html
+13 JS Array Functions.html

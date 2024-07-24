@@ -1,0 +1,418 @@
+01 Welcome To The Course!:
+---------------------------
+
+Hi, and welcome to this course about React.js,
+the most popular JavaScript library
+you can learn these days.
+I'm super happy to welcome you on board.
+My name is Maximilian Schwarzmuller
+and I will be your instructor in this course.
+Now in this first course section here,
+I'm going to walk you through the most important questions.
+What is React?
+Why do we use it?
+And I'll also explain what's inside this course,
+how you can take this course,
+which content you find in here.
+Therefore, my recommendation is that you carefully
+go through all those lectures
+so that you will get a great overview of both
+React and this course.
+And then thereafter, in this course,
+you're really going to learn all about React
+in great detail, step-by-step.
+You don't need any prior React knowledge.
+You just need basic JavaScript knowledge,
+and I also got a refresher on that,
+so that we're all on the same page,
+and therefore I'd say let's not waste any time.
+Instead, let's dive into the most important question first.
+What exactly is React
+and why might it be a good idea to learn it?
+
+02 What is React.js:
+---------------------
+[Maximilian Schwarzmüller] So what is React
+or React.js as it's actually called?
+And why would we use it?
+Well, to answer that first question, what it is,
+we can of course visit reactjs.org,
+the official React.js webpage.
+And there we learn that React is a JavaScript library
+for building user interfaces.
+That's a nice sentence.
+But what exactly does that mean?
+Consider an example like Netflix Service,
+Netflix website and application.
+This application is highly interactive
+and runs pretty smoothly when we work with it.
+It's easy to use
+and we don't have to wait for anything to load,
+we have nice transitions.
+If we go to the My List page
+that transition happens pretty much instantly.
+We don't seem to wait for a new page to load here,
+and that's all pretty nice.
+And here I'm using Netflix in my browser.
+So this is a website here.
+Now, when we use a service like Netflix,
+it might almost feel a bit like a mobile app,
+even though I am using the website here.
+Because mobile apps give us this
+great highly reactive user experience.
+From mobile apps where use that we have smooth transition
+that it's fun to use that app
+and that things happen instantly.
+And at least traditionally,
+websites didn't always feel like this.
+Traditionally in websites, when we, for example,
+clicked a link or a button,
+our request was sent to a server
+and a new HTML page was sent back to the browser
+where it then could be displayed.
+And therefore, traditionally, websites could feel
+a bit clunky,
+we might have that latency where we wait
+for this new HTML page to load and so on.
+And it's this request and response cycle,
+which we can break up with JavaScript.
+So at this point we don't even need React,
+it's just a JavaScript which can help us here.
+Because JavaScript is a programming language
+that allows us as a developer to run logic in the browser.
+And the great thing about that logic in the browser
+is that it can do things that manipulate what the user sees.
+JavaScript in the browser is able to manipulate
+to so-called Dom, the HTML elements
+that are rendered onto the screen.
+We can manipulate this with JavaScript.
+And that allows us to change what the users sees
+without fetching a new HTML page.
+We don't need to request a new HTML page
+just to present something different to the user.
+So that's why JavaScript can help us.
+And since React is a JavaScript library,
+it looks like it can also help us with that.
+It might be an extra building block,
+and indeed, React.js is a client-side JavaScript library.
+It helps us with writing that client-side JavaScript code
+and it's all about building modern reactive user interfaces
+for websites.
+And in this course, you're going to learn
+about all the different features and tools React.js has
+and gives you that make building complex
+user interfaces easy.
+But one question remains, why do we need React?
+Because at this point we know that JavaScript is helpful,
+and I hope I could explain why it is.
+But how can React specifically help us,
+why might we want React in addition to JavaScript?
+For this, I built a simple,
+a very simple demo here.
+A simple website which has some interactivity,
+as you will see in the next lecture.
+And in the next lecture, I will show you
+how we can build this website
+and the interactivity it has with just JavaScript,
+and how to code what's then look like with React
+in addition to JavaScript.
+And that will then make it clear
+why using React could be a good idea.
+
+03:
+---
+
+04 Building Single-Page Applications (SPAs) with React:
+--------------------------------------------------------
+
+Now because things get easier with React,
+and because we can build those
+rich user interfaces with React and JavaScript,
+when working with React we often build
+so-called Single Page Applications.
+Because whilst we can use React
+to control parts of an HTML page,
+let's say some interactive sidebar,
+and therefore we add a widget, you could say
+to a page where only a part of
+the page is controlled with React.
+It is more common to control
+the entire page with React.
+Which means that we use React
+for everything we see on the screen
+and even for switching pages.
+So when we click on a link
+and we load a new page
+as I did with Netflix when I clicked on my list
+it looks to the user as if we switched a page
+but we actually don't request
+a new HTML file from some server.
+Instead we just used JavaScript through React.js
+to change what's visible on the screen.
+And that often leads to a smoother UI
+and a better user experience.
+As you see it at the example of Netflix.
+It's built with React
+and there we never request a second HTML page.
+Hence it's a Single Page Application
+where after the initial request
+to decide React takes over
+and controls what we see on the screen.
+
+05 Exploring React.js Alternatives (Angular, Vue):
+---------------------------------------------------
+
+Now, this course
+is about React, but it is worth noting
+that there are alternatives to React.js.
+Now we're going to focus on React here and React is one
+of the most popular front-end frameworks
+or libraries, however, you want to call it you can learn.
+It's a lean and focused component-based UI library.
+It really focuses on this component thing,
+and it doesn't have a lot of other features built in.
+If you need our features like routing which we are,
+of course, going to learn about in detail in this course
+then you need to install a extra third-party library.
+And that will sometimes be the case when working with React,
+that you need to install third-party libraries
+to add certain pieces of functionality to your application
+because React itself really just focuses
+on these components, which we're going
+to learn about in greater detail later,
+what exactly they are and how we create them,
+and how it then renders these components,
+and your user interface onto the screen.
+That's the focus of React and extra functionality
+which you might need for your React app,
+therefore, sometimes has to be added
+with help of some third-party package.
+Now, an alternative to React, which has
+more built in features would be Angular
+another very important,
+and very popular front-end framework.
+And I got a course on this as well.
+Angular is a complete component-based UI framework.
+So, it also focuses on components just like React,
+but it ships more built in features than React.
+It also embraces TypeScript right from the start.
+And it can be overkill for smaller projects,
+therefore, since it has way more features built in.
+But for a large project, on the other hand,
+you don't need to rely on the community as much
+because there's more built into that framework.
+So, that's simply a little consideration you have to make.
+The syntax also looks a bit differently
+because, whilst it is component focused,
+building these components works a bit differently
+with Angular than it does with React.
+Again, I got a course on that,
+if you want to check out Angular as well.
+And we also have another very popular framework,
+another popular alternative and that would be Vue.js.
+Vue.js is kind of like the mixture of Angular and React,
+in between those two extremes,
+if you want to call it like this.
+It's also a complete component-based UI framework.
+And it also includes a lot of features,
+but a bit less features than Angular, but more than React.
+It includes core features like routing, for example,
+and therefore with Vue, you also have
+to rely less on the community and still you don't have
+as much overload possibly as you might have with Angular,
+depending on what you build.
+I also got a more detailed comparison video
+on these three technologies,
+in case you're interested in that.
+Now, all three are super popular.
+React currently is probably the most popular,
+but all three are great, I got courses
+on all three and therefore checking
+those out might be a good idea as well.
+But this course, of course, is about React
+and therefore let's not lose any time, let's dive right in.
+
+06 About This Course & Course Outline:
+---------------------------------------
+
+Now as part of this first course section
+I also wanna give you an overview
+of what you can expect from this course
+and which topics will be covered.
+Now, of course,
+you maybe already had a look at the course curriculum
+and you absolutely should take a brief look at least
+because this is a huge course
+and I can't pack all the contents that's in the course
+into this one lecture here,
+I don't wanna turn this into a 20 minute lecture
+and in addition,
+I kept this course updated in the past
+and i kept adding new content from time to time,
+and i do plan to do that in the future.
+So the, curriculum you see on the course page
+is always up to date.
+The content here in this video is just a summary
+of the most important features.
+There's way more in the course,
+so definitely check out that full curriculum in addition.
+Now, with that out of the way,
+this course is organized into three main categories
+or course sections you could say.
+And the first category of sections,
+is about the basics,
+the foundation of React.
+These will be sections
+that cover core features
+which React offers to you,
+which you have to know no matter
+which React App you're building.
+Now, the second category of course sections,
+then is about more advanced concepts.
+So this course does not stop after the basics.
+Instead, we are going to dive
+into a lot of advanced concepts as well.
+These are the concepts which you need for real apps
+which you really wanna push to production I would say.
+These are concepts which you don't need in every app
+but realistically you will need them in a lot of apps
+and that's why we're also going to dive
+into such advanced concepts in depth
+in this course.
+Now the last kind of course, sections and content
+which you'll find in this course
+will be sections that contain the summaries
+or refreshers on certain concepts
+ensuring that we're all on the same page
+and that you got a single place to go to,
+well, summarize the core concepts you learned about.
+But let's now take a closer look at
+which kind of content you can expect in detail
+for these different categories of content.
+We will, of course start with the key basics
+that you have to know.
+And when you'll learn, React,
+those core basics will be about components,
+you will learn that react is all about components
+and how you can build your own components
+and how you can combine them
+and how you can build user interfaces
+with this component approach React takes.
+You will also learn how to work with events
+and data, so how you can listen to button clicks
+and then change something on the screen,
+and you will learn about props and state,
+which probably doesn't tell you anything right now
+but which are key React concepts
+which I am going to introduce in great detail
+in this course.
+Now, since this course is about
+building user interfaces in the end
+of course you're also going to learn,
+how you can style your react apps and components,
+how you can make sure that your user interfaces,
+which you build with React look the way
+you want them to look.
+And I'm also going to introduce you to
+another key feature called React Hooks.
+You will learn what exactly that is,
+and you will learn that it is one of
+the most important concepts of modern React
+and therefore, of course it's also covered
+in great detail In this course.
+Now, these four boxes on this slide here
+are not four course sections.
+These concepts, which are listed here
+in this basics category
+are indeed taught through a lot more course sections.
+This is just a summary of the content you can expect.
+And if you simply continue with the next lectures
+and sections, you are going to learn
+these key concepts step by step.
+Because of course I ordered all the course content
+and all the course lectures,
+such that you are learning
+about all those important React features step-by-step
+so that everything builds up on each other.
+Now, as I mentioned, we don't stop after those basics.
+Instead we'll directly move from basics to more
+advanced concepts.
+And therefore, this course also
+contains sections about working with side effects
+and Refs and what Refs are
+and more React hooks.
+And if this all sounds very cryptic right now
+that's no problem
+This is just an overview,
+Some terms you might've heard about before,
+which are also covered by this course,
+you will learn what these concepts are about
+and how they work throughout this course of course.
+Now we are also going to explore app wide state management
+with Reacts context API and Redux.
+React Redux is a third party library,
+one of the most important React, third party libraries
+and we're going to cover it in detail in multiple sections
+in this course.
+And you are also going to learn how you can handle
+user input with forms,
+how you can send HTTP requests
+behind the scenes to store data
+in a database or fetch data from there,
+And you're going to learn how to build your own custom Hooks
+and what that actually is.
+You're also going to learn how to implement routing
+and what routing is in detail,
+how you can build a page that gives the user the illusion
+of having multiple pages, even though
+it's a single page app as you learned.
+you're going to learn how to deploy your React App,
+and we're for example, also going to dive
+into another framework called Next.js
+which builds up on React.js,
+which will make building production-ready
+React Apps even easier.
+And that will be another a huge module on Next.js
+which is also included in this course
+a little bit later in this course
+since that will already be quite advanced then.
+And there is more,
+as i said, this is not exhaustive,
+have a look at their full course curriculum
+to see all the content
+this is just the general structure of this course
+and what you can expect from it.
+Now, as I mentioned, there also are some summary
+and refresher course sections,
+and specifically there is
+a JavaScript refresher course section,
+that's the next course section after this one actually
+which is 100% optional
+but which you can take to ensure that we're all
+on the same page regarding JavaScript,
+because in that refresher section I'm going to
+refresh some core modern JavaScript features
+which we're going to use in this course as well.
+And there will also be a React.js summary module
+at the end of this course
+about which I'll talk in greater detail
+in the next course lecture,
+because it turns out that for this course,
+you actually have more than one possible way
+of taking this course.
+But again, I'll dive a bit deeper
+into that in the next lecture.
+Now, all that content in this course
+will be explained in great detail
+in theory, and web small demos and examples
+but then we are also going to have a couple of bigger
+more realistic course projects and examples
+where you can practice what you learned
+and where you see the different concepts come together
+and where you see how a React app is built
+by using all those React features.
+Last but not least,
+there also are plenty of challenges and exercises for you,
+so that by the end of the course
+you can really call yourself a React developer.
+
