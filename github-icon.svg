@@ -28,7 +28,7 @@
       }
       .github {
         transform: scale(3) translate(4.7px, 4.7px);
-        stroke: black;
+        stroke: white;
         fill: white;
         stroke-width: 0.5;
         stroke-dasharray: 140;
@@ -46,7 +46,7 @@
         transform: rotate(90deg);
         stroke: black;
         stroke-width: 35;
-        fill: transparent;
+        fill: white;
         stroke-dasharray: 220;
         stroke-dashoffset: 220;
         animation: fill-ani 5s linear infinite;
