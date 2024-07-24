@@ -119,8 +119,175 @@ in addition to JavaScript.
 And that will then make it clear
 why using React could be a good idea.
 
-03:
----
+03 Why React Instead Of Just JavaScript:
+----------------------------------------
+Code => Path: (\React-Complete-Guide-2024\Code\01 - Getting Started\React Js Comparison)
+
+This is a very simple demo here.
+(whooshing)
+I have some content on the page
+and when I click delete, I get this overlay,
+where I can confirm or cancel.
+Now both buttons don't do anything,
+but close that overlay,
+as does clicking that backdrop.
+But what you see on this page here,
+or what happens when we click delete,
+all of that is controlled with JavaScript.
+I got a HTML file, with some very basic
+HTML content, some styling, which you can ignore.
+And then the magic happens in this app, JS file.
+In there, I got some code, that in the end
+adds a Listener to this main button,
+which we got on the screen.
+So too this delete button here.
+And when that button is clicked,
+I fired this showModalHandler function.
+And in there we run a bunch of JavaScript code,
+to create various elements, divs, paragraphs
+and then the cancel and confirm buttons,
+to configure those elements
+and add text or CSS classes.
+And to add EventListeners to those
+elements as well, to then fire
+that closeModalHandler function,
+which in the end removes the overlay,
+this modal as we call it.
+And then still in the showModalHandler function,
+I got some code that combines all those
+created elements and brings them onto the screen.
+This is the JavaScript code responsible
+for opening this overlay here.
+Now it works and it's not too bad,
+but it's quite some code for this simple action.
+And here we only got one Todo,
+in this demo application.
+If we would add multiple Todos,
+if we would repeat this HTML code multiple times
+to render more Todos on the page,
+or to even render those Todos dynamically,
+after fetching them from a database, for example,
+this code would become far more difficult,
+far more complex.
+And for example, I couldn't just select a button
+on the page with that querySelector,
+because we would have multiple delete buttons,
+for multiple Todos.
+And we would have to make sure,
+that for different Todos,
+different overlays are opened.
+And when we confirm the deletion,
+the correct Todo is deleted.
+We're not even doing that here in this demo,
+but that would be more complexity,
+which we have to add and handle,
+if we build a more realistic app here,
+a more realistic website.
+And therefore just JavaScript works
+and can sometimes be a good choice,
+but it can also reach its limits.
+And one of the reasons is that
+with just the JavaScript, you have to write
+every single step that should be taken.
+We want to create a element.
+We want to set its content.
+We want to add classes.
+We want to add a click listener.
+Then what should happen on that click listener.
+Every single step needs to be described.
+This way of programming and bringing something
+onto the screen, is called an imperative approach.
+We simply describe action after action,
+step after step and that can reach its limits.
+And in addition, even if we don't reach any limits,
+we as a developer have to take care
+about all the nitty-gritty details.
+We have to run the low level code
+for creating a button, for setting it's text content.
+And therefore in the end, we reinvent the wheel,
+over and over again, doing repetitive tasks.
+Now here's the same example with React.
+This works in exactly the same way,
+but the code looks very different.
+I got a React project here.
+And as a side note, you find both code repositories,
+both code snapshots attached.
+And here in React.js, this might look
+a bit more complex, we got more files involved here,
+but that's something we're going to learn
+throughout the course, why we have multiple files,
+but in the end, this is the main code
+that's responsible for bringing this Todo
+onto the screen.
+And what's very interesting here,
+is that we have like a custom HTML component here,
+a custom HTML element.
+And indeed React is all about those components.
+React is all about splitting your application
+into small building blocks, small components,
+where every building block, every component,
+has a clear task and therefore your code
+stays maintainable and manageable
+and React, the library, will do the heavy lifting
+of rendering something on the screen
+and of combining all your code.
+So for example, if we look into the code
+for this custom element, which we built here,
+which lives in this Todo.js file,
+then we here again see that I have some HTML code
+for rendering a Todo, but that we have
+some kind of placeholder in here
+and then some kind of other code,
+which we don't fully understand yet,
+but which we will understand
+and learn about throughout this course.
+And in the end, that's the code
+responsible for rendering such a Todo
+and for rendering the modal, this overlay here,
+as well and for rendering it conditionally.
+And what's interesting here, is that even though
+we don't understand this code yet
+and even though it's certainly strange
+that we have HTML code in JavaScript files,
+even though that's all weird,
+we can definitely see that we don't have a bunch
+of step-by-step instructions here.
+Instead, we kind of define what we want to have
+as an end result.
+And then we have some placeholders,
+some flexible elements there.
+And then we have very simple instructions here,
+which in the end then will be processed
+by React to change what's visible on the screen.
+And all these low level instructions
+for creating elements and setting text continents on,
+those instructions are not written by us
+when using React, instead they will be written,
+or defined if you wanna call it like this,
+by the React library.
+We, as a React developer, work on a higher level,
+which makes working with React and which makes
+building complex user interfaces way easier.
+And that is why we want to use React.js,
+it makes building modern, rich, complex
+user interfaces easier.
+And it does so, by giving us
+a higher level syntax, where we write code
+in a declarative way, in a declarative
+component-focused way, we define
+what we wanna have on the screen.
+What the end goal is.
+We create these custom HTML elements
+and React will do the rest.
+And one side effect, for example,
+is that if we wanted more than one Todo,
+we could just copy that custom element,
+change maybe that text, that configuration
+and boom, we got a second Todo here.
+And we got up button on that Todo,
+which works as well.
+And that is why we use technologies
+or frameworks like React.
 
 04 Building Single-Page Applications (SPAs) with React:
 --------------------------------------------------------
@@ -415,4 +582,3 @@ Last but not least,
 there also are plenty of challenges and exercises for you,
 so that by the end of the course
 you can really call yourself a React developer.
-
