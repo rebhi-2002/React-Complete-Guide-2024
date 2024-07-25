@@ -101,7 +101,7 @@ This course starts with zero knowledge assumed! **All you need is basic web deve
 - Anyone who's interested in learning an extremely popular technology used by leading tech companies like Netflix
 - Students who want to take their web development skills to the next level and learn a future-proof technology
 
-### Welcome!
+### Great to have you on board as a student!
 
 ##### Here is the community on Discord link: https://academind.com/community
 
