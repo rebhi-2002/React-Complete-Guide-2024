@@ -101,6 +101,16 @@ This course starts with zero knowledge assumed! **All you need is basic web deve
 - Anyone who's interested in learning an extremely popular technology used by leading tech companies like Netflix
 - Students who want to take their web development skills to the next level and learn a future-proof technology
 
+### Welcome!
+
+##### Here is the community on Discord link: https://academind.com/community
+
+_In this community, you can connect with like-minded individuals, discuss issues, offer help, share progress, successes, and ideas, and have a great time!_
+
+_I believe learning becomes more effective when you're not learning alone, but rather finding learning partners and people with similar interests. It is the perfect complementary resource for this course._
+
+Joining is completely free and 100% optional!
+
 ## References & Resources 🌐
 
 - [Udemy Course Page](https://www.udemy.com/course/react-the-complete-guide-incl-redux/?couponCode=D_0724)
