@@ -101,7 +101,7 @@ This course starts with zero knowledge assumed! **All you need is basic web deve
 - Anyone who's interested in learning an extremely popular technology used by leading tech companies like Netflix
 - Students who want to take their web development skills to the next level and learn a future-proof technology
 
-### References & Resources 🌐
+## References & Resources 🌐
 
 - [Udemy Course Page](https://www.udemy.com/course/react-the-complete-guide-incl-redux/?couponCode=D_0724)
 - [Academind YouTube Channel](https://www.youtube.com/channel/UCSJbGtTlrDami-tDGPUV9-w)
@@ -111,7 +111,7 @@ This course starts with zero knowledge assumed! **All you need is basic web deve
 - [Course Code Repository](https://github.com/academind/react-complete-guide-code/tree/master)
 - [Maximilian Schwarzmüller GitHub](https://github.com/maxschwarzmueller)
 
-### Additional Resources 📖
+## Additional Resources 📖
 
 - [React Documentation](https://reactjs.org/docs/getting-started.html)
 - [Redux Documentation](https://redux.js.org/introduction/getting-started)
