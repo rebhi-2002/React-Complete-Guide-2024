@@ -1,0 +1,149 @@
+function App() {
+  /*
+  in regular JavaScript,
+  you would kind of select the element on the page.
+  For example, with document.getElementByID('root'),
+  as we we're doing it here, but then you would not be done.
+  If you then want to add a paragraph,
+  you either set the inner HTML content to something,
+  or you, first of all, create a new element
+  with document.createElement, creating a paragraph.
+  And then you got your paragraph here like this.
+  And you would set the textContent to "This is also visible".
+  And then you would reach out to some place in the DOM
+  and then simply call append or appendChild
+  and add this created paragraph.
+  That is how you would do it in regular JavaScript.
+  */
+
+  const para = document.createElement("p");
+  para.textContent = "This is also visible";
+  document.getElementById("root").append(para);
+
+  /*
+  And this is called imperative.
+  This is following an imperative approach.
+  Because you are giving clear instructions,
+  clear step-by-step instructions,
+  what JavaScript and the browser should be doing.
+
+  Now, this works, but it can get cumbersome,
+  or complex user interfaces with dozens
+  or hundreds of elements, which also might be changing
+  and appearing and disappearing all the time,
+  having to write all these instructions is very cumbersome.
+  */
+
+  return (
+    /*
+    With React instead, we just define the desired end state,
+    that we want a div, an h2 tag, and a paragraph,
+    and React will then generate these instructions
+    behind the scenes to bring that onto the screen.
+    */
+    <div>
+      <h2>Let's get started!</h2>
+      <p>This is also visible!</p>
+    </div>
+  );
+}
+
+export default App;
+
+/*
+  this function looks quite different
+  to the app function we have here.
+  That's a very lean function. ⬆️
+  This function ⬇️ is not so lean.
+  Well in the end debts is transformed code.
+*/
+
+// function App() {
+//   return /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("div", {
+//     children: /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("h2", {
+//       children: "Let's get started!"
+//     }, void 0, false, {
+//       fileName: _jsxFileName,
+//       lineNumber: 4,
+//       columnNumber: 7
+//     }, this)
+//   }, void 0, false, {
+//     fileName: _jsxFileName,
+//     lineNumber: 3,
+//     columnNumber: 5
+//   }, this);
+// }
+
+/*
+  You could say that is that code, which runs in the browser
+  which is not the code we wrote
+  but that's what this code is transformed to.
+*/
+
+/*
+  If you're new to React,
+  you do know some basic JavaScript at least you should.
+  And all of a sudden you see code like this
+  which is not regular JavaScript.
+  Well, this is just developer friendly code
+  which we can write, which is transformed behind the scenes.
+*/
+
+============================================================================
+
+import ExpenseItem from "./components/ExpenseItem";
+
+function App() {
+  // A Component in React is just a JavaScript function.
+  return (
+    // A special kind of function special regarding what it returns that it does return this JSX code, but other than that, it's just a Java script function.
+    <div>
+      <h2>Let's get started!</h2>
+      {/* <p>This is also visible!</p> */}
+      <ExpenseItem></ExpenseItem>
+      {/*
+        The key difference to the built in HTML elements
+        just is that it's not starting with a lowercase character,
+        but with an uppercase character.
+        And indeed your own custom Components
+        must start with an uppercase character
+        when you're using DOM JSX code like this,
+        so that React is able to detect
+        that this is a custom Component.
+        Because the simple rule which React applies
+        is that lowercase elements are built in HTML elements.
+        So it will look for them as built in elements.
+        Where as elements starting with an uppercase character
+        are elements defined by you or some other developer.
+        So this is a custom made Component
+        and we have to use the name which we use here in the import
+        as a name here [import ExpenseItem from ...], because that's how this connection
+        is established.
+        This tells React that we want to use this Component
+        which is imported under this name
+        from the expense item file.
+      */}
+    </div>
+
+    /*
+    We Now:
+      - created: [\src\components\ExpenseItem.js]
+      - and imported: [import ExpenseItem from "./components/ExpenseItem";]
+      - used this custom Component: [<ExpenseItem></ExpenseItem>]
+    */
+    /*
+      And it's always these steps.
+      You create a Component, which is in the end, just a function => [function ExpenseItem() { return <h2>Expense item!</h2>; }]
+      of returning some HTML code, you then export it. => [export default ExpenseItem;]
+      And then ultimately you import it in the file
+      where you wanna use it => [import ExpenseItem from "...";] so that they're in the JSX [JavaScript XML] code,
+      you can use it like an HTML element,
+      just starting with this uppercase character.
+    */
+  );
+}
+
+export default App;
+
+============================================================================
+
