@@ -1,0 +1,141 @@
+import React, {useState} from "react";
+
+/*
+all these React hooks can be recognized by the fact that they start with the word "use" in their name, and all these hooks must only be called inside of React component functions like ExpenseItem.
+They can't be called outside of these functions, like this.
+And they all just shouldn't be called in any nested functions.
+They must be called directly inside such component functions.
+There is one exception which we'll talk about later but for the moment, that is what you should keep in mind.
+Now, useState doesn't work just like that.
+Instead, useState once a default state value, because with useState we basically create a special kind of variable, you could say, a variable where changes will lead this component function to be called again.
+And of course we can therefore assign an initial value for that special variable, just as we're assigning a value here for does regular variable.
+So here, my initial value is props.title.
+And we simply pass this as an argument to useState.
+*/
+
+import ExpenseDate from "./ExpenseDate";
+import Card from "../UI/Card";
+import "./ExpenseItem.css";
+
+function ExpenseItem(props) {
+  // document.getElementById('root').addEventListener();
+  // function clickHandler() {}
+
+  //* Array Destructuring: Store both elements in separate variables or constants.
+  const [title, setTitle] = useState(props.title);
+  console.log("ExpenseItem evaluated by React");
+  // we see it's called four times which makes a lot of sense because we're using ExpenseItem four times in expenses. So four separate instances of this component are being created.
+  // But if I now click on change title in one of the ExpenseItems, we see it's only printed once. Which is basically happening because of what I just explained. Only that specific instance is being updated and therefore for being re-evaluated, and the other instances are not effected by that State change. And that's important to keep in mind that State really is separated on a per component instance basis. Now there's one other thing which could be confusing. And that's the fact that I'm using const here. Why am I using const here when we do eventually assign a new value? Well, keep in mind that we're not assigning a value with the equal sign. That would indeed fail but that is not how we assign a new value when we update a State. Instead we call this State updating function, and the concrete value is simply managed somewhere else by React. By calling useState we tell React that it should manage some value for us. We never see that variable itself. So therefore, we just call a function and we never assign a new value to title with the equal operator. And therefore, using a const is absolutely fine. How do we get the latest title value then though? Well, keep in mind that the component function is re-executed when the State is updated. And therefore, of course, this line of code, line 11 [const [title, setTitle] = useState(props.title);], also is executed again whenever the component function is executed again. So if we called setTitle and we assign a new title, that leads to this component being called again and therefore, this new title, this updated title is fetched from React, which manages the State for us. Basically we go to React and say, "Hey please give me that latest title State which I told you to manage for me." And React provides us this latest State in this array which useState always returns. So we always get a brand new snapshot of that State when this component function re-executes. That's how this works under the hood.
+
+  // let title = props.title;
+
+  const clickHandler = () => {
+    // console.log("Clicked!!!");
+    // title = "Updated";
+    setTitle("Updated!");
+    console.log(title);
+    /*
+      if I do that we see the same results as before, so why am I doing that.
+      Well since it's a variable, we could change it whenever the click handler executes.
+      So whenever this button has clicked, we execute this click handler function and in there if we now change title to updated, then we should see that change title on our screen, right?
+      Because we are outputting title down there, we're changing it up on a click we should see that value here in this place after such a click happened.
+      Well, let's save everything and give a try.
+      If we go back, you'll notice that if I click change title , nothing happens.
+      I can hammer this button and nothing happens.
+      This title here never changes, so why is this happening?
+      Is something wrong with our click handler?
+      Well this function is getting triggered, I can prove this, if I console lock
+      the title here after we changed it, you will notice that if I now go back and reload, if I click change title, we see that updated title text here.
+      So it looks like it worked, the click handler clearly executed and title clearly was changed.
+      Otherwise we wouldn't see that new value which we assign here in line 14 [title = "Updated";] once we log it in line 15 [console.log(title);].
+      -----
+      So if the function executes and the title is changed, why don't we see that reflected in our DOM, after all we are outputting the title down there in line 78 [<h2>{title}</h2>].
+      Well, simply because react doesn't work like this.
+      And that's where now I have to dive into how react actually passes the JSS code and how it considers that and how it brings it on to the screen.
+      Though I will have an even deeper dive later in the course,
+      -----
+      but there's one key thing which you have to know right now, keep in mind that your component [ExpenseItem.js] is a function.
+      This is a function right? Your component is just a regular function, the only special thing about that function, is that it returns JSX.
+      Now since it's a function someone has to call it, and you might notice that we never called our component functions, instead we just used these functions like HTML elements [<ExpenseItem /> in Expenses.js] in this JSX code.
+      Well, the thing is,
+      under the hood this is almost like a function call. [<ExpenseItem title={props.items[0].title} amount={props.items[0].amount} date={props.items[0].date} />]
+      By using our components in JSX code, we make React aware of our component functions.
+      For example here, we make react aware of the expense item function.
+      And whenever react evaluates this JSX code, it will call these component functions.
+      And these component functions stand to return JSX code,
+        return (
+          <Card className="expense-item">
+            <ExpenseDate date={props.date} />
+            <div className="expense-item__description">
+              <h2>{title}</h2>
+              <div className="expense-item__price">${props.amount}</div>
+            </div>
+            <button onClick={clickHandler}>Change Title</button>
+          </Card>
+        );
+      which is all the evaluated, up until there's no more JSX code to be evaluated.
+      So react keeps on calling any component functions it encounters in JSX, then calls any functions that those functions might have returned so any elements those components might have used in their JSX code until there are no more functions left.
+      So in the case of expenses.js, if react encounters this expense item, it calls this expense item component function, executes all the code in there, encounters this JSX code and calls this card function and this expense state function and then it goes through the JSX code of this components
+        return (
+          <div className="expense-date">
+            <div className="expense-date__month">{month}</div>
+            <div className="expense-date__year">{year}</div>
+            <div className="expense-date__day">{day}</div>
+          </div>
+        );
+    until there's no more component code left to call.
+    And then it re-evaluates the overall result and translates that into DOM instructions which renders something like this on the screen.
+    That's how react works.
+    -----
+    Now it's all started by the index.js file, ....
+    */
+  };
+
+  return (
+    <Card className="expense-item">
+      <ExpenseDate date={props.date} />
+      <div className="expense-item__description">
+        {/* <h2>{props.title}</h2> {/* <h2>{props.name}</h2> */}
+        <h2>{title}</h2>
+        <div className="expense-item__price">${props.amount}</div>
+      </div>
+      {/*
+        <button onClick={}>Change Title</button>
+        <button onClick={() => {console.log("Clicked!");}}>Change Title</button>
+        <button onClick={function () {}}>Change Title</button>
+      */}
+      <button onClick={clickHandler}>Change Title</button>
+      {/*
+        - onClick={clickHandler}:
+        =========================
+        we just point at clickHandler.
+        And that's important, by the way, we just point at it.
+        We don't execute it here.
+        You don't add parentheses here.
+        Instead, you just repeat the name of the function.
+        No matter if you created that function like this or with the function keyword, this does not matter.
+        No matter how you defined it, you just point at it like this.
+        Why?
+        Because if you would add parentheses here, JavaScript would execute this when this line of code is being parsed.
+        And this line of code is being parsed when the JSX code is returned.
+        So it's then not executing clickHandler when the click occurs but when this JSX code is evaluated, and that would be too early.
+        That's why instead we just point at the clickHandler.
+        We just point at the function.
+        We pass a pointer at this function as a value to onClick, and then React basically memorizes this and executes the function for us whenever the click occurs so that it's not executed when this is evaluated but when the click occurs, which is exactly what we want.
+      */}
+      {/*
+        we can add supported event listeners basically.
+        OnClick, for example, basically is available on every element [<div onClick className="expense-item__description">].
+        Some events are only available on specific elements.
+        But that is all based on the default DOM behavior.
+        If an element supports an event, then you can add a listener with React by adding such an on and then the event name prop.
+        Just make sure that the event name starts with a capital character, like in the case of onClick here.
+        And then you just point at a function, either defined in line here [<button onClick={() => { console.log("Clicked!"); } }>Change Title</button>] or, better, defined upfront [const clickHandler = () => {console.log("Clicked!!!");}; | <button onClick={clickHandler}>Change Title</button>],
+        and React will execute that function for you when that event occurs.
+        That's how you add events.
+      */}
+    </Card>
+  );
+}
+
+export default ExpenseItem;
