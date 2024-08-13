@@ -1,0 +1,86 @@
+C:\cmder
+λ cd /d "D:\مجلد جديد\React Js - ACADE MIND\06 - Styling React Components"
+
+D:\مجلد جديد\React Js - ACADE MIND\06 - Styling React Components
+λ ls
+
+D:\مجلد جديد\React Js - ACADE MIND\06 - Styling React Components
+λ npx create-react-app react-complete-guide
+
+Creating a new React app in D:\مجلد جديد\React Js - ACADE MIND\06 - Styling React Components\react-complete-guide.
+
+Installing packages. This might take a couple of minutes.
+Installing react, react-dom, and react-scripts with cra-template...
+
+
+added 1480 packages in 2m
+
+261 packages are looking for funding
+  run `npm fund` for details
+
+Initialized a git repository.
+
+Installing template dependencies using npm...
+
+added 63 packages, and changed 1 package in 16s
+
+261 packages are looking for funding
+  run `npm fund` for details
+Removing template package using npm...
+
+
+removed 1 package, and audited 1543 packages in 7s
+
+261 packages are looking for funding
+  run `npm fund` for details
+
+8 vulnerabilities (2 moderate, 6 high)
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+
+Created git commit.
+
+Success! Created react-complete-guide at D:\مجلد جديد\React Js - ACADE MIND\06 - Styling React Components\react-complete-guide
+Inside that directory, you can run several commands:
+
+  npm start
+    Starts the development server.
+
+  npm run build
+    Bundles the app into static files for production.
+
+  npm test
+    Starts the test runner.
+
+  npm run eject
+    Removes this tool and copies build dependencies, configuration files
+    and scripts into the app directory. If you do this, you can’t go back!
+
+We suggest that you begin by typing:
+
+  cd react-complete-guide
+  npm start
+
+Happy hacking!
+
+D:\مجلد جديد\React Js - ACADE MIND\06 - Styling React Components
+λ cd .\react-complete-guide\
+
+D:\مجلد جديد\React Js - ACADE MIND\06 - Styling React Components\react-complete-guide>
+λ npm start
+
+Compiled successfully!
+
+You can now view react-complete-guide in the browser.
+
+  Local:            http://localhost:3000
+  On Your Network:  http://192.168.1.167:3000
+
+Note that the development build is not optimized.
+To create a production build, use npm run build.
+
+webpack compiled successfully
+
