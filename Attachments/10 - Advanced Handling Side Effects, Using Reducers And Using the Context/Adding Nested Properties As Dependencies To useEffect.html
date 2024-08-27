@@ -1,0 +1,46 @@
+<p>
+  In the previous lecture, we used object destructuring to add object properties
+  as dependencies to <code>useEffect()</code>.
+</p>
+<pre class="prettyprint linenums">
+const { someProperty } =&nbsp;someObject;
+useEffect(()&nbsp;=&gt;&nbsp;{
+  //&nbsp;code that only uses someProperty ...
+}, [someProperty]);</pre
+>
+<p>
+  This is a <strong>very common pattern and approach</strong>, which is why
+  I&nbsp;typically use it and why I show it here (I&nbsp;will keep on using it
+  throughout the course).
+</p>
+<p>
+  I just want to point out, that they
+  <strong>key thing is NOT that we use destructuring</strong> but that we
+  <strong>pass specific properties instead of the entire object</strong> as a
+  dependency.
+</p>
+<p>
+  We could also write this code and it would
+  <strong>work in the same way</strong>.
+</p>
+<pre class="prettyprint linenums">
+useEffect(()&nbsp;=&gt;&nbsp;{
+  //&nbsp;code that only uses someProperty ...
+}, [someObject.someProperty]);</pre
+>
+<p>This works just fine as well!</p>
+<p>But you should <strong>avoid</strong> this code:</p>
+<pre class="prettyprint linenums">
+useEffect(()&nbsp;=&gt;&nbsp;{
+  //&nbsp;code that only uses someProperty ...
+}, [someObject]);</pre
+>
+<p>Why?</p>
+<p>
+  Because now the
+  <strong>effect function would re-run whenever ANY&nbsp;property</strong> of
+  <code>someObject</code> changes - not just the one property (<code
+    >someProperty</code
+  >
+  in the above example)&nbsp;our effect might depend on.
+</p>

@@ -1,0 +1,124 @@
+<p>
+  In the previous lecture, we explored
+  <code>useEffect()</code>&nbsp;dependencies.
+</p>
+<p>
+  You learned, that you should add "everything"&nbsp;you use in the effect
+  function as a dependency - i.e. all state variables and functions you use in
+  there.
+</p>
+<p>
+  That is correct, but there are a <strong>few exceptions</strong> you should be
+  aware of:
+</p>
+<ul>
+  <li>
+    <p>
+      You <strong>DON'T need to add state updating functions</strong> (as we did
+      in the last lecture with <code>setFormIsValid</code>):&nbsp;React
+      guarantees that those functions never change, hence you don't need to add
+      them as dependencies (you could though)
+    </p>
+  </li>
+  <li>
+    <p>
+      You also
+      <strong>DON'T need to add "built-in"&nbsp;APIs or functions</strong> like
+      <code>fetch()</code>, <code>localStorage</code> etc&nbsp;(functions and
+      features built-into the browser and hence available globally): These
+      browser&nbsp;APIs / global functions are not related to the React
+      component render cycle and they also never change
+    </p>
+  </li>
+  <li>
+    <p>
+      You also
+      <strong>DON'T&nbsp;need to add variables or functions</strong> you
+      might've <strong>defined OUTSIDE of your components</strong> (e.g. if you
+      create a new helper function in a separate file):&nbsp;Such functions or
+      variables also are not created inside of a component function and hence
+      changing them won't affect your components (components won't be
+      re-evaluated if such variables or functions change and vice-versa)
+    </p>
+  </li>
+</ul>
+<p>
+  So long story short:&nbsp;You must add all "things"&nbsp;you use in your
+  effect function
+  <strong
+    >if those "things"&nbsp;could change because your component (or some parent
+    component)&nbsp;re-rendered.</strong
+  >
+  That's why variables or state defined in component functions, props or
+  functions defined in component functions have to be added as dependencies!
+</p>
+<p>
+  Here's a made-up dummy example to further clarify the above-mentioned
+  scenarios:
+</p>
+<pre class="prettyprint linenums">
+import { useEffect, useState } from 'react';
+
+let myTimer;
+
+const MyComponent =&nbsp;(props)&nbsp;=&gt;&nbsp;{
+  const [timerIsActive, setTimerIsActive] = useState(false);
+
+  const { timerDuration } =&nbsp;props;&nbsp;// using destructuring to pull out specific props values
+
+  useEffect(()&nbsp;=&gt;&nbsp;{
+    if (!timerIsActive) {
+      setTimerIsActive(true);
+      myTimer =&nbsp;setTimeout(()&nbsp;=&gt;&nbsp;{
+        setTimerIsActive(false);
+      }, timerDuration);
+    }
+  }, [timerIsActive, timerDuration]);
+};</pre
+>
+<p>In this example:</p>
+<ul>
+  <li>
+    <p>
+      <code>timerIsActive</code> is
+      <strong>added as a dependency</strong> because it's component state that
+      may change when the component changes (e.g. because the state was updated)
+    </p>
+  </li>
+  <li>
+    <p>
+      <code>timerDuration</code> is
+      <strong>added as a dependency</strong> because it's a prop value of that
+      component - so it may change if a parent component changes that value
+      (causing this MyComponent component to re-render as well)
+    </p>
+  </li>
+  <li>
+    <p>
+      <code>setTimerIsActive</code> is
+      <strong>NOT added as a dependency</strong> because it's that
+      <strong>exception</strong>:&nbsp;State updating functions could be added
+      but don't have to be added since React guarantees that the functions
+      themselves never change
+    </p>
+  </li>
+  <li>
+    <p>
+      <code>myTimer</code> is
+      <strong>NOT&nbsp;added as a dependency</strong> because it's
+      <strong>not a component-internal variable</strong> (i.e. not some state or
+      a prop value) - it's defined outside of the component and changing it (no
+      matter where)&nbsp;<strong
+        >wouldn't cause the component to be re-evaluated</strong
+      >
+    </p>
+  </li>
+  <li>
+    <p>
+      <code>setTimeout</code> is
+      <strong>NOT added as a dependency</strong> because it's
+      <strong>a built-in API</strong>&nbsp;(built-into the browser) - it's
+      independent from React and your components, it doesn't change
+    </p>
+  </li>
+</ul>
