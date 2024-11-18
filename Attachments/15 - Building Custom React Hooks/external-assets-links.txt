@@ -1,0 +1,2 @@
+010 More-about-bind-Indirect-Function-Execution-Tutorial:
+https://academind.com/tutorials/function-bind-event-execution/

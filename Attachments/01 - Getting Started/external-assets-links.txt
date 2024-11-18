@@ -1,2 +1,5 @@
-React-vs-Angular-vs-Vue-Comparison-Deep-Dive:
-https://academind.com/tutorials/angular-vs-react-vs-vue-my-thoughts/
+01 React-vs-Angular-vs-Vue-Comparison-Deep-Dive:
+https://academind.com/tutorials/angular-vs-react-vs-vue-my-thoughts
+
+02 Jump-ahead-to-the-React.js-Summary:
+https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/25601582

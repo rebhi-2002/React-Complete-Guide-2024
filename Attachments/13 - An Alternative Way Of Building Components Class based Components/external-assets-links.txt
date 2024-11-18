@@ -1,0 +1,2 @@
+01 Understanding-this-in-JavaScript-Tutorial
+https://academind.com/tutorials/this-keyword-function-references

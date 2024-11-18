@@ -1,0 +1,20 @@
+01 Your-JavaScript-code-is-exposed-to-your-visitors-More-Details
+https://academind.com/learn/javascript/hide-javascript-code
+
+02 More-on-APIs-REST-APIs-GraphQL-APIs
+https://academind.com/learn/web-dev/rest-vs-graphql
+
+03 More-on-Http-Status-Codes
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
+
+=================================================================
+
+https://swapi.dev
+https://swapi.py4e.com
+https://swapi.dev/api/films
+https://github.com/axios/axios
+https://axios-http.com/docs/intro
+https://www.npmjs.com/package/axios
+https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
+https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
+
